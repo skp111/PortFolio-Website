@@ -138,8 +138,8 @@ nav {
 
 .main-container .image {
     margin-top: 10vh;
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 50px var(--shadow-color);
@@ -239,8 +239,8 @@ nav {
 }
 
 .about .medal {
-    width: 450px;
-    height: 450px;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 50px var(--shadow-color);
@@ -362,7 +362,7 @@ nav {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 25vw);
     grid-gap: 100px;
 }
 
@@ -602,8 +602,8 @@ footer a {
     }
 
     .main-container .image {
-        width: 600px;
-        height: 600px;
+        width: 70vw;
+        height: 70vw;
         place-items: center;
     }
 
@@ -639,8 +639,8 @@ footer a {
     }
 
     .about .medal {
-        width: 500px;
-        height: 500px;
+        width: 70vw;
+        height: 70vw;
     }
 
     .education {
@@ -696,7 +696,7 @@ footer a {
     }
 
     .grid-container {
-        grid-template-columns: repeat(1, 500px);
+        grid-template-columns: repeat(1, 70vw);
         row-gap: 30px;
     }
 
@@ -772,13 +772,6 @@ footer a {
 
     .main-container .content {
         margin-top: 8vh;
-        /*margin-left: 6%;*/
-    }
-
-    .main-container .image {
-        width: 325px;
-        height: 325px;
-        /*margin-left: 7.5%;*/
     }
 
     .content h1,
@@ -808,14 +801,7 @@ footer a {
 
     /*---------------------------About section---------------------------*/
 
-    .about .medal {
-        width: 325px;
-        height: 325px;
-        /*margin-left: 7.5%;*/
-    }
-
     .education ul {
-        /*margin-left: 6%;*/
         padding: 5px;
         font-size: 1.25rem;
     }
@@ -832,7 +818,6 @@ footer a {
 
     .ts {
         grid-template-columns: repeat(1, 90%);
-        /*argin-left: 2%;*/
     }
 
     .skill-bar .bar {
@@ -844,7 +829,6 @@ footer a {
     }
 
     .grid-container {
-        grid-template-columns: repeat(1, 100%);
         row-gap: 20px;
     }
 
