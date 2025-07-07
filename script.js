@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formData = new FormData(form);
 
-    fetch("https://formspree.io/f/{Your formsfree api}", {
+    fetch("https://formspree.io/f/xeoknavz", {
       method: "POST",
       body: formData,
       headers: {

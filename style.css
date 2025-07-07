@@ -556,8 +556,8 @@ footer a {
         display: block;
         cursor: pointer;
         position: absolute;
-        right: 25px;
-        top: 30px;
+        right: 4vw;
+        top: 3vh;
         color: var(--shadow-color);
         font-size: 2.5rem;
         transform: translateY(0px);
@@ -761,8 +761,8 @@ footer a {
 
     .menu,
     .cancel {
-        right: 20px;
-        top: 30px;
+        right: 4vw;
+        top: 3.5vh;
         font-size: 1.70rem;
     }
 
