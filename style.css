@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+
+:root {
+    --main-color: rgb(4, 172, 244);
+    --bg-color: rgb(31, 30, 30);
+    --body-bg-color: black;
+    --text-color: white;
+    --hover-color: gold;
+    --shadow-color: yellow;
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+/* ---------------------------------------------------Nav Section----------------------------------------------------------*/
+
+.menu{
+    display: none !important;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--body-bg-color);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    color: var(--text-color);
+    margin: 0px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.nav-container .links a.active {
+    color: var(--hover-color);
+    border-bottom: 3px solid var(--hover-color);
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--hover-color);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: var(--hover-color);
+}
+
+.dropdown {
+    display: none;
+}
+
+/* ---------------------------------------------------Home Section---------------------------------------------------------- */
+
+.home,
+.about,
+.skills,
+.projects,
+.contact {
+    width: 100%;
+    min-height: 90vh;
+    font-size: 1.1rem;
+    margin-top: 5vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .image {
+    margin-top: 10vh;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--shadow-color);
+}
+
+.main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.main-container .content {
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1,
+.typewriter {
+    font-size: 1.5rem;
+}
+
+.content h1 span,
+.typewriter-text {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.content p {
+    font-size: 1.25rem;
+    margin: 10px 0px;
+    color: var(--hover-color)
+}
+
+.social-links i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.social-links i:hover {
+    scale: 1.1;
+    color: var(--hover-color);
+    filter: drop-shadow(0 0 20px var(--hover-color));
+    border: 0.2rem solid var(--hover-color);
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: var(--body-bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.btn:hover {
+    scale: 1.1;
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    box-shadow: 0 0 20px var(--hover-color);
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------About Section---------------------------------------------------------- */
+
+.mid {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about .medal {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--shadow-color);
+}
+
+.about .medal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .medal:hover {
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+.about .same {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.education{
+    width: 40vw;
+    min-height: 250px;
+}
+
+.education ul {
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.education ul li:first-child {
+    text-align: center;
+}
+
+.education ul:hover {
+    scale: 1.1;
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    box-shadow: 0 0 10px var(--hover-color);
+}
+
+.info {
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.info p b {
+    color: var(--main-color);
+}
+
+.read-more-btn {
+    display: none;
+}
+
+/* ---------------------------------------------------Skill Section---------------------------------------------------------- */
+
+.ts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    margin-bottom: 20px;
+}
+
+.ts1,
+.ts2 {
+    padding: 15px;
+}
+
+.skill-bar {
+    margin-bottom: 10px;
+}
+
+.skill-bar .back {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+    border: 1px solid var(--main-color);
+}
+
+.skill-bar .bar span {
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    box-shadow: var(--main-color);
+}
+
+.skill-bar:hover .bar {
+    border: 1px solid var(--hover-color);
+}
+
+.skill-bar:hover .bar span {
+    background-color: var(--hover-color);
+}
+
+.skill-bar:hover {
+    scale: 1.03;
+}
+
+.ps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 25vw);
+    grid-gap: 100px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.outer-circle {
+    width: 130px;
+    height: 130px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    width: 100px;
+    height: 100px;
+    background: var(--body-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.skill:hover {
+    scale: 1.1;
+    border: 2px solid var(--hover-color);
+}
+
+/* ---------------------------------------------------Project Section---------------------------------------------------------- */
+
+.portfolio-gallery {
+    margin-top: 20px;
+    margin-bottom: 15vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5%;
+}
+
+.port-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.port-image {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+}
+
+.port-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.port-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.651);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 15px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.port-image:hover .port-content {
+    opacity: 1;
+}
+
+.port-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--hover-color);
+}
+
+.proj-link {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.proj-link a {
+    color: var(--hover-color);
+    font-size: 2.5rem;
+}
+
+.proj-link a:hover {
+    scale: 1.2;
+    color: var(--main-color);
+}
+
+/* ---------------------------------------------------Contact Section---------------------------------------------------------- */
+
+.contact form {
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    margin-bottom: 10px;
+    border: 2px solid var(--hover-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.contact form textarea {
+    resize: none;
+    min-height: 30vh;
+}
+
+/* ---------------------------------------------------Footer Section---------------------------------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid var(--shadow-color);
+    width: 100%;
+    height: 10vh;
+}
+
+footer p {
+    font-size: 1.25rem;
+}
+
+footer a {
+    color: var(--shadow-color);
+    font-size: 2.0rem;
+}
+
+/* ---------------------------------------------------Tablet Section---------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    /*---------------------------Nav section---------------------------*/
+
+    .logo {
+        font-size: 3.0rem;
+    }
+
+    .menu,
+    .cancel {
+        display: block  !important;
+        cursor: pointer;
+        position: absolute;
+        right: 4vw;
+        top: 3vh;
+        color: var(--shadow-color);
+        font-size: 2.5rem;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .dropdown {
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        display: none;
+        width: 50%;
+        height: auto;
+        background-color: var(--bg-color);
+    }
+
+    .dropdown .links a {
+        display: flex;
+        color: var(--hover-color);
+        font-size: 2rem;
+        border-bottom: 1px solid var(--main-color);
+        text-decoration: none;
+        justify-content: center;
+        padding: 15px 0px;
+        align-items: center;
+    }
+
+    /*---------------------------Home section---------------------------*/
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-container .content {
+        margin-top: 5vh;
+        width: 80%;
+    }
+
+    .main-container .image {
+        width: 70vw;
+        height: 70vw;
+        place-items: center;
+    }
+
+    .content h1,
+    .typewriter {
+        font-size: 2.0rem;
+    }
+
+    .content p {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+
+    .social-links i {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 2.0rem;
+        margin-right: 15px;
+    }
+
+    .social-links {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    /*---------------------------About section---------------------------*/
+
+    .about .same {
+        flex-direction: column;
+    }
+
+    .about .medal {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .education {
+        margin-top: 5vh;
+        width: 65vw;
+    }
+
+    .education ul {
+        width: 100%;
+        padding: 5px;
+        font-size: 1.5rem;
+        justify-self: center;
+    }
+
+    .info p {
+        font-size: 1.5rem;
+    }
+
+    .more-text {
+        display: none;
+    }
+
+    .read-more-btn {
+        display: inline-block;
+        background-color: var(--body-bg-color);
+        color: var(--main-color);
+        width: auto;
+        height: auto;
+        padding: 5px;
+        border: 2px solid var(--hover-color);
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 1.40rem;
+    }
+
+    /*---------------------------Skill section---------------------------*/
+
+    .ts {
+        grid-template-columns: repeat(1, 80%);
+        place-content: center;
+    }
+
+    .skill-bar {
+        margin-bottom: 20px;
+    }
+
+    .skill-bar .bar {
+        height: 15px;
+    }
+
+    .skill-bar .back p {
+        font-size: 1.50rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 70vw);
+        row-gap: 30px;
+    }
+
+    .outer-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .inner-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .percent {
+        font-size: 1.75rem;
+    }
+
+    .label {
+        font-size: 1.75rem;
+    }
+
+    /*---------------------------Project section---------------------------*/
+
+    .portfolio-gallery {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 3%;
+        margin-bottom: 20vh;
+    }
+
+    .port-content h3 {
+        font-size: 2rem;
+    }
+
+    .proj-link a {
+        color: var(--main-color);
+        font-size: 3rem;
+    }
+
+    /*---------------------------Contact Section---------------------------*/
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 1.5rem;
+    }
+
+    .contact form textarea {
+        min-height: 15vh;
+    }
+
+}
+
+/* ---------------------------------------------------Phone Section---------------------------------------------------------- */
+
+@media (max-width: 575px) {
+
+    /*---------------------------Nav section---------------------------*/
+    .logo {
+        font-size: 1.35rem;
+    }
+
+    .menu,
+    .cancel {
+        right: 4vw;
+        top: 3.5vh;
+        font-size: 1.70rem;
+    }
+
+    .dropdown .links a {
+        font-size: 1.25rem;
+    }
+
+    /*---------------------------Home section---------------------------*/
+
+    .main-container .content {
+        margin-top: 8vh;
+    }
+
+    .content h1,
+    .typewriter {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    .social-links i {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+
+    .social-links {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    /*---------------------------About section---------------------------*/
+
+    .education ul {
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+
+    .info p {
+        font-size: 1.1rem;
+    }
+
+    .read-more-btn {
+        font-size: 1.1rem;
+    }
+
+    /*---------------------------Skill section---------------------------*/
+
+    .ts {
+        grid-template-columns: repeat(1, 90%);
+    }
+
+    .skill-bar .bar {
+        height: 10px;
+    }
+
+    .skill-bar .back p {
+        font-size: 1.1rem;
+    }
+
+    .grid-container {
+        row-gap: 20px;
+    }
+
+    .outer-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .inner-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .label {
+        font-size: 1.25rem;
+    }
+
+    /*---------------------------Project section---------------------------*/
+
+    .portfolio-gallery {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2%;
+        margin-bottom: 15vh;
+    }
+
+    .port-content h3 {
+        font-size: 1.65rem;
+    }
+
+    .port-content p {
+        display: none;
+    }
+
+    .proj-link a {
+        font-size: 2.5rem;
+    }
+
+    /*---------------------------Contact Section---------------------------*/
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 1.1rem;
+    }
+
+    .contact form textarea {
+        min-height: 25vh;
+    }
+
+    /*---------------------------Footer Section---------------------------*/
+
+    footer p {
+        font-size: 1.0rem;
+    }
+
+    footer a {
+        font-size: 1.75rem;
+    }
+ 
+}
